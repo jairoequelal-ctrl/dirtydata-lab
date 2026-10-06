@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><title>DirtyData Lab</title>
+    <style>body{font:16px system-ui;background:#101527;color:#ecf0ff;max-width:1000px;margin:40px auto;padding:24px}
+    h1{font-size:44px;margin-bottom:8px}.tag{color:#69e3c0}.stats{display:flex;gap:16px;flex-wrap:wrap}
+    .card{background:#1c2440;border-radius:14px;padding:20px;flex:1;min-width:150px}
+    b{font-size:30px;display:block}table{border-collapse:collapse;width:100%;margin:20px 0}
+    th,td{padding:12px;border-bottom:1px solid #35405b;text-align:left}small{color:#b6c2df}
+    a{color:#69e3c0}</style><header><span class="tag">SYNTHETIC DATA QUALITY CHALLENGE</span>
+    <h1>DirtyData Lab</h1><p>Break data deliberately. Measure what your checks catch.</p></header>
+    <div class="stats"><div class="card"><b>100</b>clean rows</div>
+    <div class="card"><b>103</b>dirty rows</div><div class="card"><b>20</b>
+    injected events</div><div class="card"><b>42</b>reproducible seed</div></div>
+    <h2>Injected errors</h2><table><tr><th>Error type</th><th>Events</th></tr><tr><td>missing_value</td><td>3</td></tr><tr><td>duplicate_id</td><td>3</td></tr><tr><td>invalid_date</td><td>3</td></tr><tr><td>negative_amount</td><td>3</td></tr><tr><td>invalid_category</td><td>2</td></tr><tr><td>extra_whitespace</td><td>2</td></tr><tr><td>leading_zero_loss</td><td>2</td></tr><tr><td>orphan_reference</td><td>2</td></tr></table>
+    <h2>Example answer-key events</h2><table><tr><th>Row ID</th><th>Column</th><th>Error</th><th>Operation</th></tr><tr><td>R000084</td><td>customer_name</td><td>missing_value</td><td>update</td></tr><tr><td>R000101</td><td>customer_id</td><td>duplicate_id</td><td>append</td></tr><tr><td>R000025</td><td>signup_date</td><td>invalid_date</td><td>update</td></tr><tr><td>R000007</td><td>credit_limit</td><td>negative_amount</td><td>update</td></tr><tr><td>R000075</td><td>category</td><td>invalid_category</td><td>update</td></tr><tr><td>R000010</td><td>customer_name</td><td>extra_whitespace</td><td>update</td></tr><tr><td>R000022</td><td>postal_code</td><td>leading_zero_loss</td><td>update</td></tr><tr><td>R000099</td><td>account_manager_id</td><td>orphan_reference</td><td>update</td></tr><tr><td>R000054</td><td>customer_name</td><td>missing_value</td><td>update</td></tr><tr><td>R000102</td><td>customer_id</td><td>duplicate_id</td><td>append</td></tr><tr><td>R000030</td><td>signup_date</td><td>invalid_date</td><td>update</td></tr><tr><td>R000078</td><td>credit_limit</td><td>negative_amount</td><td>update</td></tr><tr><td>R000047</td><td>category</td><td>invalid_category</td><td>update</td></tr><tr><td>R000034</td><td>customer_name</td><td>extra_whitespace</td><td>update</td></tr><tr><td>R000036</td><td>postal_code</td><td>leading_zero_loss</td><td>update</td></tr></table>
+    <small>This report reveals ground truth. Keep it out of detector inputs. Event rate is not a cell error rate.
+    The rule baseline is a smoke test, not an independent benchmark of generalization.</small></html>

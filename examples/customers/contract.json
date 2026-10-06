@@ -1,0 +1,40 @@
+{
+  "profile": "customers",
+  "fields": {
+    "id": "customer_id",
+    "name": "customer_name",
+    "amount": "credit_limit",
+    "date": "signup_date",
+    "fk": "account_manager_id"
+  },
+  "required_columns": [
+    "row_id",
+    "customer_id",
+    "customer_name",
+    "email",
+    "credit_limit",
+    "signup_date",
+    "category",
+    "postal_code",
+    "account_manager_id"
+  ],
+  "categories": [
+    "standard",
+    "premium",
+    "enterprise"
+  ],
+  "parent_ids": [
+    "P001",
+    "P002",
+    "P003",
+    "P004",
+    "P005",
+    "P006",
+    "P007",
+    "P008",
+    "P009",
+    "P010"
+  ],
+  "postal_code_regex": "^0[0-9]{4}$",
+  "amount_min": "0.00"
+}

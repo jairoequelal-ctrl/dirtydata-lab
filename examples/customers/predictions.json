@@ -1,0 +1,102 @@
+[
+  {
+    "row_id": "R000007",
+    "column": "credit_limit",
+    "error_type": "negative_amount"
+  },
+  {
+    "row_id": "R000010",
+    "column": "customer_name",
+    "error_type": "extra_whitespace"
+  },
+  {
+    "row_id": "R000015",
+    "column": "credit_limit",
+    "error_type": "negative_amount"
+  },
+  {
+    "row_id": "R000020",
+    "column": "signup_date",
+    "error_type": "invalid_date"
+  },
+  {
+    "row_id": "R000022",
+    "column": "postal_code",
+    "error_type": "leading_zero_loss"
+  },
+  {
+    "row_id": "R000025",
+    "column": "signup_date",
+    "error_type": "invalid_date"
+  },
+  {
+    "row_id": "R000030",
+    "column": "signup_date",
+    "error_type": "invalid_date"
+  },
+  {
+    "row_id": "R000034",
+    "column": "customer_name",
+    "error_type": "extra_whitespace"
+  },
+  {
+    "row_id": "R000036",
+    "column": "postal_code",
+    "error_type": "leading_zero_loss"
+  },
+  {
+    "row_id": "R000047",
+    "column": "category",
+    "error_type": "invalid_category"
+  },
+  {
+    "row_id": "R000049",
+    "column": "customer_name",
+    "error_type": "missing_value"
+  },
+  {
+    "row_id": "R000054",
+    "column": "customer_name",
+    "error_type": "missing_value"
+  },
+  {
+    "row_id": "R000075",
+    "column": "category",
+    "error_type": "invalid_category"
+  },
+  {
+    "row_id": "R000078",
+    "column": "credit_limit",
+    "error_type": "negative_amount"
+  },
+  {
+    "row_id": "R000081",
+    "column": "account_manager_id",
+    "error_type": "orphan_reference"
+  },
+  {
+    "row_id": "R000084",
+    "column": "customer_name",
+    "error_type": "missing_value"
+  },
+  {
+    "row_id": "R000099",
+    "column": "account_manager_id",
+    "error_type": "orphan_reference"
+  },
+  {
+    "row_id": "R000101",
+    "column": "customer_id",
+    "error_type": "duplicate_id"
+  },
+  {
+    "row_id": "R000102",
+    "column": "customer_id",
+    "error_type": "duplicate_id"
+  },
+  {
+    "row_id": "R000103",
+    "column": "customer_id",
+    "error_type": "duplicate_id"
+  }
+]

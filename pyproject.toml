@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dirtydata-lab"
+version = "0.1.0"
+description = "Generate reproducible dirty datasets with ground truth and score data-quality detectors"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Jairo Quelal"}]
+dependencies = []
+keywords = ["data-quality", "synthetic-data", "data-cleaning", "benchmark", "csv"]
+
+[project.urls]
+Repository = "https://github.com/jairoequelal-ctrl/dirtydata-lab"
+Issues = "https://github.com/jairoequelal-ctrl/dirtydata-lab/issues"
+
+[project.scripts]
+dirtydata = "dirtydata_lab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dirtydata_lab*"]

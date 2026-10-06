@@ -1,0 +1,557 @@
+{
+  "schema_version": 1,
+  "generator_version": "0.1.0",
+  "seed": 42,
+  "base_rows": 100,
+  "dirty_rows": 103,
+  "requested_event_rate": 0.2,
+  "event_count": 20,
+  "errors": [
+    "missing_value",
+    "duplicate_id",
+    "invalid_date",
+    "negative_amount",
+    "invalid_category",
+    "extra_whitespace",
+    "leading_zero_loss",
+    "orphan_reference"
+  ],
+  "hashes": {
+    "clean.csv": "d9f9c42158ef5f588870fe461da89aacc1507bb763fee3457af6b8a7ae83f8e9",
+    "dirty.csv": "5a1ba46fe05b230b7314d301625cd53a0f78d84f3dd0e0d8dc7e60bcd5f70662",
+    "parents.csv": "5d0a77e365aa70cd5b413e72a0b764a4a89470bbfba14051e0546b3d6c67c916",
+    "contract.json": "b4fc03447173e900e974daa7de955e8e793b39f2b1f60412b07f90163f43b22c"
+  },
+  "events": [
+    {
+      "row_id": "R000084",
+      "column": "customer_name",
+      "error_type": "missing_value",
+      "operation": "update",
+      "before": {
+        "row_id": "R000084",
+        "customer_id": "CUS-000084",
+        "customer_name": "Demo customer 000084",
+        "email": "demo84@example.invalid",
+        "credit_limit": "464.57",
+        "signup_date": "2025-10-14",
+        "category": "premium",
+        "postal_code": "03532",
+        "account_manager_id": "P004"
+      },
+      "after": {
+        "row_id": "R000084",
+        "customer_id": "CUS-000084",
+        "customer_name": "",
+        "email": "demo84@example.invalid",
+        "credit_limit": "464.57",
+        "signup_date": "2025-10-14",
+        "category": "premium",
+        "postal_code": "03532",
+        "account_manager_id": "P004"
+      }
+    },
+    {
+      "row_id": "R000101",
+      "column": "customer_id",
+      "error_type": "duplicate_id",
+      "operation": "append",
+      "before": null,
+      "after": {
+        "row_id": "R000101",
+        "customer_id": "CUS-000001",
+        "customer_name": "Demo customer 000001",
+        "email": "demo1@example.invalid",
+        "credit_limit": "839.10",
+        "signup_date": "2025-02-27",
+        "category": "standard",
+        "postal_code": "05506",
+        "account_manager_id": "P004"
+      }
+    },
+    {
+      "row_id": "R000025",
+      "column": "signup_date",
+      "error_type": "invalid_date",
+      "operation": "update",
+      "before": {
+        "row_id": "R000025",
+        "customer_id": "CUS-000025",
+        "customer_name": "Demo customer 000025",
+        "email": "demo25@example.invalid",
+        "credit_limit": "991.61",
+        "signup_date": "2025-01-25",
+        "category": "standard",
+        "postal_code": "03504",
+        "account_manager_id": "P003"
+      },
+      "after": {
+        "row_id": "R000025",
+        "customer_id": "CUS-000025",
+        "customer_name": "Demo customer 000025",
+        "email": "demo25@example.invalid",
+        "credit_limit": "991.61",
+        "signup_date": "2025-02-30",
+        "category": "standard",
+        "postal_code": "03504",
+        "account_manager_id": "P003"
+      }
+    },
+    {
+      "row_id": "R000007",
+      "column": "credit_limit",
+      "error_type": "negative_amount",
+      "operation": "update",
+      "before": {
+        "row_id": "R000007",
+        "customer_id": "CUS-000007",
+        "customer_name": "Demo customer 000007",
+        "email": "demo7@example.invalid",
+        "credit_limit": "995.58",
+        "signup_date": "2025-03-23",
+        "category": "enterprise",
+        "postal_code": "07924",
+        "account_manager_id": "P006"
+      },
+      "after": {
+        "row_id": "R000007",
+        "customer_id": "CUS-000007",
+        "customer_name": "Demo customer 000007",
+        "email": "demo7@example.invalid",
+        "credit_limit": "-995.58",
+        "signup_date": "2025-03-23",
+        "category": "enterprise",
+        "postal_code": "07924",
+        "account_manager_id": "P006"
+      }
+    },
+    {
+      "row_id": "R000075",
+      "column": "category",
+      "error_type": "invalid_category",
+      "operation": "update",
+      "before": {
+        "row_id": "R000075",
+        "customer_id": "CUS-000075",
+        "customer_name": "Demo customer 000075",
+        "email": "demo75@example.invalid",
+        "credit_limit": "370.30",
+        "signup_date": "2025-11-06",
+        "category": "standard",
+        "postal_code": "06617",
+        "account_manager_id": "P004"
+      },
+      "after": {
+        "row_id": "R000075",
+        "customer_id": "CUS-000075",
+        "customer_name": "Demo customer 000075",
+        "email": "demo75@example.invalid",
+        "credit_limit": "370.30",
+        "signup_date": "2025-11-06",
+        "category": "premiun",
+        "postal_code": "06617",
+        "account_manager_id": "P004"
+      }
+    },
+    {
+      "row_id": "R000010",
+      "column": "customer_name",
+      "error_type": "extra_whitespace",
+      "operation": "update",
+      "before": {
+        "row_id": "R000010",
+        "customer_id": "CUS-000010",
+        "customer_name": "Demo customer 000010",
+        "email": "demo10@example.invalid",
+        "credit_limit": "792.31",
+        "signup_date": "2025-05-16",
+        "category": "standard",
+        "postal_code": "08527",
+        "account_manager_id": "P009"
+      },
+      "after": {
+        "row_id": "R000010",
+        "customer_id": "CUS-000010",
+        "customer_name": "  Demo customer 000010  ",
+        "email": "demo10@example.invalid",
+        "credit_limit": "792.31",
+        "signup_date": "2025-05-16",
+        "category": "standard",
+        "postal_code": "08527",
+        "account_manager_id": "P009"
+      }
+    },
+    {
+      "row_id": "R000022",
+      "column": "postal_code",
+      "error_type": "leading_zero_loss",
+      "operation": "update",
+      "before": {
+        "row_id": "R000022",
+        "customer_id": "CUS-000022",
+        "customer_name": "Demo customer 000022",
+        "email": "demo22@example.invalid",
+        "credit_limit": "348.18",
+        "signup_date": "2025-03-13",
+        "category": "standard",
+        "postal_code": "09830",
+        "account_manager_id": "P005"
+      },
+      "after": {
+        "row_id": "R000022",
+        "customer_id": "CUS-000022",
+        "customer_name": "Demo customer 000022",
+        "email": "demo22@example.invalid",
+        "credit_limit": "348.18",
+        "signup_date": "2025-03-13",
+        "category": "standard",
+        "postal_code": "9830",
+        "account_manager_id": "P005"
+      }
+    },
+    {
+      "row_id": "R000099",
+      "column": "account_manager_id",
+      "error_type": "orphan_reference",
+      "operation": "update",
+      "before": {
+        "row_id": "R000099",
+        "customer_id": "CUS-000099",
+        "customer_name": "Demo customer 000099",
+        "email": "demo99@example.invalid",
+        "credit_limit": "412.45",
+        "signup_date": "2025-12-06",
+        "category": "standard",
+        "postal_code": "05920",
+        "account_manager_id": "P009"
+      },
+      "after": {
+        "row_id": "R000099",
+        "customer_id": "CUS-000099",
+        "customer_name": "Demo customer 000099",
+        "email": "demo99@example.invalid",
+        "credit_limit": "412.45",
+        "signup_date": "2025-12-06",
+        "category": "standard",
+        "postal_code": "05920",
+        "account_manager_id": "UNKNOWN-PARENT"
+      }
+    },
+    {
+      "row_id": "R000054",
+      "column": "customer_name",
+      "error_type": "missing_value",
+      "operation": "update",
+      "before": {
+        "row_id": "R000054",
+        "customer_id": "CUS-000054",
+        "customer_name": "Demo customer 000054",
+        "email": "demo54@example.invalid",
+        "credit_limit": "581.82",
+        "signup_date": "2025-10-09",
+        "category": "standard",
+        "postal_code": "01828",
+        "account_manager_id": "P009"
+      },
+      "after": {
+        "row_id": "R000054",
+        "customer_id": "CUS-000054",
+        "customer_name": "",
+        "email": "demo54@example.invalid",
+        "credit_limit": "581.82",
+        "signup_date": "2025-10-09",
+        "category": "standard",
+        "postal_code": "01828",
+        "account_manager_id": "P009"
+      }
+    },
+    {
+      "row_id": "R000102",
+      "column": "customer_id",
+      "error_type": "duplicate_id",
+      "operation": "append",
+      "before": null,
+      "after": {
+        "row_id": "R000102",
+        "customer_id": "CUS-000001",
+        "customer_name": "Demo customer 000001",
+        "email": "demo1@example.invalid",
+        "credit_limit": "839.10",
+        "signup_date": "2025-02-27",
+        "category": "standard",
+        "postal_code": "05506",
+        "account_manager_id": "P004"
+      }
+    },
+    {
+      "row_id": "R000030",
+      "column": "signup_date",
+      "error_type": "invalid_date",
+      "operation": "update",
+      "before": {
+        "row_id": "R000030",
+        "customer_id": "CUS-000030",
+        "customer_name": "Demo customer 000030",
+        "email": "demo30@example.invalid",
+        "credit_limit": "385.69",
+        "signup_date": "2025-08-11",
+        "category": "standard",
+        "postal_code": "08433",
+        "account_manager_id": "P001"
+      },
+      "after": {
+        "row_id": "R000030",
+        "customer_id": "CUS-000030",
+        "customer_name": "Demo customer 000030",
+        "email": "demo30@example.invalid",
+        "credit_limit": "385.69",
+        "signup_date": "2025-02-30",
+        "category": "standard",
+        "postal_code": "08433",
+        "account_manager_id": "P001"
+      }
+    },
+    {
+      "row_id": "R000078",
+      "column": "credit_limit",
+      "error_type": "negative_amount",
+      "operation": "update",
+      "before": {
+        "row_id": "R000078",
+        "customer_id": "CUS-000078",
+        "customer_name": "Demo customer 000078",
+        "email": "demo78@example.invalid",
+        "credit_limit": "58.78",
+        "signup_date": "2025-01-02",
+        "category": "premium",
+        "postal_code": "03143",
+        "account_manager_id": "P005"
+      },
+      "after": {
+        "row_id": "R000078",
+        "customer_id": "CUS-000078",
+        "customer_name": "Demo customer 000078",
+        "email": "demo78@example.invalid",
+        "credit_limit": "-58.78",
+        "signup_date": "2025-01-02",
+        "category": "premium",
+        "postal_code": "03143",
+        "account_manager_id": "P005"
+      }
+    },
+    {
+      "row_id": "R000047",
+      "column": "category",
+      "error_type": "invalid_category",
+      "operation": "update",
+      "before": {
+        "row_id": "R000047",
+        "customer_id": "CUS-000047",
+        "customer_name": "Demo customer 000047",
+        "email": "demo47@example.invalid",
+        "credit_limit": "707.78",
+        "signup_date": "2025-03-09",
+        "category": "enterprise",
+        "postal_code": "08744",
+        "account_manager_id": "P004"
+      },
+      "after": {
+        "row_id": "R000047",
+        "customer_id": "CUS-000047",
+        "customer_name": "Demo customer 000047",
+        "email": "demo47@example.invalid",
+        "credit_limit": "707.78",
+        "signup_date": "2025-03-09",
+        "category": "premiun",
+        "postal_code": "08744",
+        "account_manager_id": "P004"
+      }
+    },
+    {
+      "row_id": "R000034",
+      "column": "customer_name",
+      "error_type": "extra_whitespace",
+      "operation": "update",
+      "before": {
+        "row_id": "R000034",
+        "customer_id": "CUS-000034",
+        "customer_name": "Demo customer 000034",
+        "email": "demo34@example.invalid",
+        "credit_limit": "696.14",
+        "signup_date": "2025-01-01",
+        "category": "enterprise",
+        "postal_code": "06310",
+        "account_manager_id": "P008"
+      },
+      "after": {
+        "row_id": "R000034",
+        "customer_id": "CUS-000034",
+        "customer_name": "  Demo customer 000034  ",
+        "email": "demo34@example.invalid",
+        "credit_limit": "696.14",
+        "signup_date": "2025-01-01",
+        "category": "enterprise",
+        "postal_code": "06310",
+        "account_manager_id": "P008"
+      }
+    },
+    {
+      "row_id": "R000036",
+      "column": "postal_code",
+      "error_type": "leading_zero_loss",
+      "operation": "update",
+      "before": {
+        "row_id": "R000036",
+        "customer_id": "CUS-000036",
+        "customer_name": "Demo customer 000036",
+        "email": "demo36@example.invalid",
+        "credit_limit": "76.92",
+        "signup_date": "2025-05-04",
+        "category": "enterprise",
+        "postal_code": "02290",
+        "account_manager_id": "P002"
+      },
+      "after": {
+        "row_id": "R000036",
+        "customer_id": "CUS-000036",
+        "customer_name": "Demo customer 000036",
+        "email": "demo36@example.invalid",
+        "credit_limit": "76.92",
+        "signup_date": "2025-05-04",
+        "category": "enterprise",
+        "postal_code": "2290",
+        "account_manager_id": "P002"
+      }
+    },
+    {
+      "row_id": "R000081",
+      "column": "account_manager_id",
+      "error_type": "orphan_reference",
+      "operation": "update",
+      "before": {
+        "row_id": "R000081",
+        "customer_id": "CUS-000081",
+        "customer_name": "Demo customer 000081",
+        "email": "demo81@example.invalid",
+        "credit_limit": "48.22",
+        "signup_date": "2025-07-09",
+        "category": "enterprise",
+        "postal_code": "03426",
+        "account_manager_id": "P007"
+      },
+      "after": {
+        "row_id": "R000081",
+        "customer_id": "CUS-000081",
+        "customer_name": "Demo customer 000081",
+        "email": "demo81@example.invalid",
+        "credit_limit": "48.22",
+        "signup_date": "2025-07-09",
+        "category": "enterprise",
+        "postal_code": "03426",
+        "account_manager_id": "UNKNOWN-PARENT"
+      }
+    },
+    {
+      "row_id": "R000049",
+      "column": "customer_name",
+      "error_type": "missing_value",
+      "operation": "update",
+      "before": {
+        "row_id": "R000049",
+        "customer_id": "CUS-000049",
+        "customer_name": "Demo customer 000049",
+        "email": "demo49@example.invalid",
+        "credit_limit": "864.74",
+        "signup_date": "2025-08-09",
+        "category": "premium",
+        "postal_code": "07939",
+        "account_manager_id": "P007"
+      },
+      "after": {
+        "row_id": "R000049",
+        "customer_id": "CUS-000049",
+        "customer_name": "",
+        "email": "demo49@example.invalid",
+        "credit_limit": "864.74",
+        "signup_date": "2025-08-09",
+        "category": "premium",
+        "postal_code": "07939",
+        "account_manager_id": "P007"
+      }
+    },
+    {
+      "row_id": "R000103",
+      "column": "customer_id",
+      "error_type": "duplicate_id",
+      "operation": "append",
+      "before": null,
+      "after": {
+        "row_id": "R000103",
+        "customer_id": "CUS-000001",
+        "customer_name": "Demo customer 000001",
+        "email": "demo1@example.invalid",
+        "credit_limit": "839.10",
+        "signup_date": "2025-02-27",
+        "category": "standard",
+        "postal_code": "05506",
+        "account_manager_id": "P004"
+      }
+    },
+    {
+      "row_id": "R000020",
+      "column": "signup_date",
+      "error_type": "invalid_date",
+      "operation": "update",
+      "before": {
+        "row_id": "R000020",
+        "customer_id": "CUS-000020",
+        "customer_name": "Demo customer 000020",
+        "email": "demo20@example.invalid",
+        "credit_limit": "351.93",
+        "signup_date": "2025-02-03",
+        "category": "standard",
+        "postal_code": "06155",
+        "account_manager_id": "P004"
+      },
+      "after": {
+        "row_id": "R000020",
+        "customer_id": "CUS-000020",
+        "customer_name": "Demo customer 000020",
+        "email": "demo20@example.invalid",
+        "credit_limit": "351.93",
+        "signup_date": "2025-02-30",
+        "category": "standard",
+        "postal_code": "06155",
+        "account_manager_id": "P004"
+      }
+    },
+    {
+      "row_id": "R000015",
+      "column": "credit_limit",
+      "error_type": "negative_amount",
+      "operation": "update",
+      "before": {
+        "row_id": "R000015",
+        "customer_id": "CUS-000015",
+        "customer_name": "Demo customer 000015",
+        "email": "demo15@example.invalid",
+        "credit_limit": "214.19",
+        "signup_date": "2025-07-09",
+        "category": "premium",
+        "postal_code": "04432",
+        "account_manager_id": "P005"
+      },
+      "after": {
+        "row_id": "R000015",
+        "customer_id": "CUS-000015",
+        "customer_name": "Demo customer 000015",
+        "email": "demo15@example.invalid",
+        "credit_limit": "-214.19",
+        "signup_date": "2025-07-09",
+        "category": "premium",
+        "postal_code": "04432",
+        "account_manager_id": "P005"
+      }
+    }
+  ]
+}
